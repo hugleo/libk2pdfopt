@@ -78,7 +78,7 @@ void k2pdfopt_crop_bmp(KOPTContext *kctx) {
 	*/
 	margin = margin*(region->c2 - region->c1)/(kctx->dev_width - margin)/2;
 
-	kctx->bbox.x0 = (float)region->c1 - margin;
+	kctx->bbox.x0 = (float)region->c1 - margin
 	kctx->bbox.y0 = (float)region->r1 - margin;
 	kctx->bbox.x1 = (float)region->c2 + margin;
 	kctx->bbox.y1 = (float)region->r2 + margin;
