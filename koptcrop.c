@@ -63,10 +63,10 @@ void k2pdfopt_crop_bmp(KOPTContext *kctx) {
 	bmpregion_init(region);
 	masterinfo_new_source_page_init(masterinfo, k2settings, src, srcgrey, NULL,
 			region, k2settings->src_rot, NULL, NULL, 1, -1, NULL);
-	//printf("source page (%d,%d) - (%d,%d)\n",region->c1,region->r1,region->c2,region->r2);
-	//printf("source page bgcolor %d\n", region->bgcolor);
+	printf("WARN source page (%d,%d) - (%d,%d)\n",region->c1,region->r1,region->c2,region->r2);
+	printf("WARN source page bgcolor %d\n", region->bgcolor);
 	bmpregion_trim_margins(region,k2settings,0xf);
-	margin = kctx->margin*k2settings->dst_dpi
+	margin = kctx->margin*k2settings->dst_dpi;
 	/*
 	 * Suppose when page is zoomed to k level at fit to content width zoom mode,
 	 * the content width is a, the device screen width is w,
